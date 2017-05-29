@@ -40,5 +40,11 @@ Slider filling the area: https://zenitht.com/wp-slider/?page_id=34
 
 (u: wp / p: wp)
 
+
+## Screenshots:
+![screenshot_0](https://zenitht.com/screenshots/wp-slider/screenshot_0.png)
+![screenshot_1](https://zenitht.com/screenshots/wp-slider/screenshot_1.png)
+![screenshot_2](https://zenitht.com/screenshots/wp-slider/screenshot_2.png)
+
 ## License
 [GPLv2](http://www.gnu.org/licenses/gpl-2.0.html) or later
