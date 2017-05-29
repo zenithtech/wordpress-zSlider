@@ -8,6 +8,7 @@ This is not a WP plugin. It's a slider script intended for advnaced usage and cu
 ## Features
 - Abilty to upload images and videos from library, and videos from YouTube.
 - Abilty to enable/disable the slideshow autoplay.
+- Abilty to enable/disable each slide individually.
 - Ability to set a different autoplay timeouts for each slide.
 - Ability to set the volume for video slides (library vidoes, youtube).
 - Videos fills the display area witout padding.
