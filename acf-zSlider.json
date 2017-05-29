@@ -1,0 +1,470 @@
+[
+    {
+        "key": "group_58110f0a388e1",
+        "title": "zSlider",
+        "fields": [
+            {
+                "key": "field_5814993497960",
+                "label": "Autoplay",
+                "name": "slider_autoplay",
+                "type": "radio",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "true": "True",
+                    "false": "False"
+                },
+                "allow_null": 0,
+                "other_choice": 0,
+                "save_other_choice": 0,
+                "default_value": "",
+                "layout": "vertical",
+                "return_format": "value"
+            },
+            {
+                "key": "field_58110f1a63162",
+                "label": "Slide",
+                "name": "slide",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "row",
+                "button_label": "Add Slide",
+                "sub_fields": [
+                    {
+                        "key": "field_5814b534489e4",
+                        "label": "Enabled",
+                        "name": "enabled",
+                        "type": "radio",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "true": "True",
+                            "false": "False"
+                        },
+                        "allow_null": 0,
+                        "other_choice": 0,
+                        "save_other_choice": 0,
+                        "default_value": "true",
+                        "layout": "vertical",
+                        "return_format": "value"
+                    },
+                    {
+                        "key": "field_5819f9978472f",
+                        "label": "Autoplay Timeout",
+                        "name": "autoplayTimeout",
+                        "type": "number",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": 4000,
+                        "placeholder": "Enter milliseconds. eg. 4000 for 4 seconds",
+                        "prepend": "",
+                        "append": "",
+                        "min": 1000,
+                        "max": "",
+                        "step": ""
+                    },
+                    {
+                        "key": "field_58111a81e6910",
+                        "label": "Title",
+                        "name": "title",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_58111a92e6911",
+                        "label": "Subheadline",
+                        "name": "subheadline",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5813ac2199592",
+                        "label": "Title (pagination)",
+                        "name": "title_pagination",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_58111ab4e6913",
+                        "label": "Subheadline (pagination)",
+                        "name": "subheadline_pagination",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_58111aaae6912",
+                        "label": "Call-to-action text",
+                        "name": "cta_text",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5863136c0a27b",
+                        "label": "Call-to-action style",
+                        "name": "cta_style",
+                        "type": "radio",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "layout": "horizontal",
+                        "choices": {
+                            "style_1": "Light",
+                            "style_2": "Dark"
+                        },
+                        "default_value": "style_1",
+                        "other_choice": 0,
+                        "save_other_choice": 0,
+                        "allow_null": 0,
+                        "return_format": "value"
+                    },
+                    {
+                        "key": "field_58110f3c63163",
+                        "label": "Page",
+                        "name": "page",
+                        "type": "page_link",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "post_type": [
+                            "post",
+                            "page",
+                            "portfolio"
+                        ],
+                        "taxonomy": [],
+                        "allow_null": 0,
+                        "allow_archives": 1,
+                        "multiple": 0
+                    },
+                    {
+                        "key": "field_58111ef096874",
+                        "label": "Headline Color",
+                        "name": "headline_color",
+                        "type": "color_picker",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "#ffffff"
+                    },
+                    {
+                        "key": "field_58111f1f96875",
+                        "label": "Subheadline Color",
+                        "name": "text_color",
+                        "type": "color_picker",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "#ffffff"
+                    },
+                    {
+                        "key": "field_58111eb996873",
+                        "label": "Background Color",
+                        "name": "background_color",
+                        "type": "color_picker",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "#000000"
+                    },
+                    {
+                        "key": "field_58111be3db329",
+                        "label": "Background Image",
+                        "name": "background_image",
+                        "type": "file",
+                        "instructions": "Allowed formats: jpg, jpeg, gif and png.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "array",
+                        "library": "all",
+                        "min_size": "",
+                        "max_size": "",
+                        "mime_types": "jpg,jpeg,gif,png"
+                    },
+                    {
+                        "key": "field_58631015835c1",
+                        "label": "Background Image Size",
+                        "name": "background_image_size",
+                        "type": "radio",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "layout": "vertical",
+                        "choices": {
+                            "100% 100%": "Stretch",
+                            "cover": "Cover",
+                            "contain": "Contain",
+                            "inherit": "Inherit",
+                            "initial": "Initial"
+                        },
+                        "default_value": "cover",
+                        "other_choice": 0,
+                        "save_other_choice": 0,
+                        "allow_null": 0,
+                        "return_format": "value"
+                    },
+                    {
+                        "key": "field_581485757bc37",
+                        "label": "Background Video (file)",
+                        "name": "background_video",
+                        "type": "repeater",
+                        "instructions": "Please insert more than one format. Webm and MP4 are recommended for browser compatibility. Additional formats such as OGG and OGV may also be inserted.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "collapsed": "",
+                        "min": 0,
+                        "max": 0,
+                        "layout": "table",
+                        "button_label": "Add Row",
+                        "sub_fields": [
+                            {
+                                "key": "field_581485a77bc38",
+                                "label": "Video",
+                                "name": "video",
+                                "type": "file",
+                                "instructions": "Allowed formats: webm, mp4, ogg and ogv.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array",
+                                "library": "all",
+                                "min_size": "",
+                                "max_size": "",
+                                "mime_types": "webm,mp4,ogg,ogv"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "field_58aea1ee960ff",
+                        "label": "Background Video Poster (file)",
+                        "name": "background_video_poster",
+                        "type": "image",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "array",
+                        "preview_size": "full",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": ""
+                    },
+                    {
+                        "key": "field_5818953667c5e",
+                        "label": "Background Video (youtube)",
+                        "name": "background_video_embed",
+                        "type": "oembed",
+                        "instructions": "Enter youtube URL, eg. https:\/\/www.youtube.com\/watch?v=Dfa1vyMM2DE",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "width": "",
+                        "height": ""
+                    },
+                    {
+                        "key": "field_5813b828a345d",
+                        "label": "Background Opacity",
+                        "name": "background_opacity",
+                        "type": "number",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": 1,
+                        "min": 0,
+                        "max": 1,
+                        "step": "0.1",
+                        "placeholder": "default = 1",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_581a837f5774e",
+                        "label": "Background Video Volume",
+                        "name": "background_video_volume",
+                        "type": "number",
+                        "instructions": "Enter volume value from 0 - 100. Default is 0.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": 0,
+                        "min": 0,
+                        "max": 100,
+                        "step": 1,
+                        "placeholder": "Enter volume value from 0 - 100. Default is 0.",
+                        "prepend": "",
+                        "append": ""
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "homepage-slider"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    }
+]
