@@ -1,7 +1,7 @@
 # wordpress-zSlider
 Custom images and videos slider script for Wordpress using [ACF](https://github.com/elliotcondon/acf), [Owl-Carousel](https://github.com/OwlCarousel2/OwlCarousel2), [Bootstrap](https://github.com/twbs/bootstrap), and animation using [GreenSock](https://github.com/greensock/GreenSock-JS).
 
-Bootstrap is not included since it doesn't affect functionality of the slider, but it's recommended that you use it.
+Bootstrap is not included since it doesn't affect functionality of the slider, but for convenience it's recommended that you use it.
 
 This is not a WP plugin. It's a slider script intended for advnaced usage and customization within WP templates.
 
