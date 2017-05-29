@@ -6,9 +6,17 @@ Bootstrap is not included since it doesn't affect functionality of the slider, b
 This is not a WP plugin. It's a slider script intended for advnaced usage and customization within WP templates.
 
 ## Features
+- Slider can display images, and videos from library and YouTube.
+- Abilty to enable/disable slideshow autoplay.
+- Ability to set a different autoplay timeouts for each slide.
+- Ability to set the volume for video slides (library vidoes, youtube).
+- Videos fill the display area witout padding.
 - ACF json structure included for import.
-- Slider can display images and videos.
-- Videos from library files and YouTube fill the display area witout padding.
+- Navigation buttons with slides length.
+- Pagination buttons row with custom titles and subtitles.
+- Progress bar for slider autoplay timeout displays above the bottom pagination buttons.
+- Videos loop when playtime reaches the end.
+- Slider loops when it reaches the end, if autoplay is enabled.
 
 ## Usage
 - Copy this repo into your active theme directory, naming it `zSlider`.
