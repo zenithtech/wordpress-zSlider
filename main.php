@@ -128,6 +128,9 @@
             jQuery("iframe.yt").parent().fitVids();
             <?php echo $onYouTubeIframeAPIReady; ?>
 	        window.zSlider.var.onYouTubeIframeAPIReadyFired = true;
+            setTimeout(function(){
+                window.zSlider.triggerYoutube('play');
+            }, 2000);
         }, 1000);
     }
 
