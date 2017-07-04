@@ -52,7 +52,9 @@ Usage as slider within content: https://zenitht.com/wp-slider/slider-within-cont
 
 ## Screenshots:
 https://zenitht.com/screenshots/zSlider/screenshot_0.png
+
 https://zenitht.com/screenshots/zSlider/screenshot_1.png
+
 https://zenitht.com/screenshots/zSlider/screenshot_2.png
 
 ![screenshot_0](https://zenitht.com/screenshots/zSlider/screenshot_0.png)
