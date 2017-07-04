@@ -28,6 +28,25 @@
                 "return_format": "value"
             },
             {
+                "key": "field_595c17d3ffc7d",
+                "label": "Slider ID",
+                "name": "slider_id",
+                "type": "text",
+                "instructions": "Enter HTML tag ID",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "zSlider",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
                 "key": "field_58110f1a63162",
                 "label": "Slide",
                 "name": "slide",
@@ -454,7 +473,7 @@
                 {
                     "param": "options_page",
                     "operator": "==",
-                    "value": "homepage-slider"
+                    "value": "zslider-slider"
                 }
             ]
         ],

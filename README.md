@@ -43,9 +43,9 @@ if( function_exists('acf_add_options_page') ) {
 <?php include_once('zSlider/main.php'); ?>
 ```
 ## Examples:
-Slider automatically filling the window: https://zenitht.com/wp-slider/
+Usage as full-screen slider: https://zenitht.com/wp-slider/
 
-Slider filling the area: https://zenitht.com/wp-slider/?page_id=34
+Usage as slider within content: https://zenitht.com/wp-slider/slider-within-content/
 
 (u: wp / p: wp)
 
