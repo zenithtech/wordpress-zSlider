@@ -51,9 +51,13 @@ Usage as slider within content: https://zenitht.com/wp-slider/slider-within-cont
 
 
 ## Screenshots:
-![screenshot_0](https://zenitht.com/screenshots/wp-slider/screenshot_0.png)
-![screenshot_1](https://zenitht.com/screenshots/wp-slider/screenshot_1.png)
-![screenshot_2](https://zenitht.com/screenshots/wp-slider/screenshot_2.png)
+https://zenitht.com/screenshots/zSlider/screenshot_0.png
+https://zenitht.com/screenshots/zSlider/screenshot_1.png
+https://zenitht.com/screenshots/zSlider/screenshot_2.png
+
+![screenshot_0](https://zenitht.com/screenshots/zSlider/screenshot_0.png)
+![screenshot_1](https://zenitht.com/screenshots/zSlider/screenshot_1.png)
+![screenshot_2](https://zenitht.com/screenshots/zSlider/screenshot_2.png)
 
 ## License
 [GPLv2](http://www.gnu.org/licenses/gpl-2.0.html) or later
