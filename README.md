@@ -65,3 +65,4 @@ https://zenitht.com/screenshots/zSlider/screenshot_2.png
 
 This package is licensed under MIT license. See LICENSE for details.
 
+
