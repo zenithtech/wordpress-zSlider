@@ -61,5 +61,7 @@ https://zenitht.com/screenshots/zSlider/screenshot_2.png
 ![screenshot_1](https://zenitht.com/screenshots/zSlider/screenshot_1.png)
 ![screenshot_2](https://zenitht.com/screenshots/zSlider/screenshot_2.png)
 
-## License
-[GPLv2](http://www.gnu.org/licenses/gpl-2.0.html) or later
+## License ##
+
+This package is licensed under MIT license. See LICENSE for details.
+
