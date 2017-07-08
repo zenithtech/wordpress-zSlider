@@ -17,7 +17,8 @@ This is not a WP plugin. It's a slider script intended for advnaced usage and cu
 - Pagination buttons row (bottom) with custom titles and subtitles.
 - Progress bar for slider autoplay timeout displays above the bottom pagination buttons.
 - Videos loop when playtime reaches the end.
-- Slider loops when it reaches the end, if autoplay is enabled.
+- Slider loops when it reaches the end (if autoplay is enabled).
+- Mobile-ready responsive layout (requires Bootstrap, not included in this package).
 
 ## Usage
 - Copy this repo into your active theme directory, naming it `zSlider`.
