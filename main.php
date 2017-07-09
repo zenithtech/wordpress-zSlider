@@ -8,6 +8,8 @@
     ?>
 </style>
 
+<script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+
 <script type="text/javascript">
 
     <?php
@@ -24,7 +26,7 @@
     window.zSlider.__proto__.id = '<?php echo get_field('slider_id', 'option'); ?>';
     window.zSlider.var.siteurl = '<?php echo get_option('siteurl'); ?>';
     window.zSlider.var.template_directory_uri = '<?php echo get_template_directory_uri(); ?>';
-    window.zSlider.var.slider_autoplay = <?php echo get_field('slider_autoplay', 'option'); ?>;
+    window.zSlider.var.slider_autoplay = '<?php echo get_field('slider_autoplay', 'option'); ?>';
     window.zSlider.var.slides = [<?php 
         $slides = get_field('slide', 'option');
         $i = 0;

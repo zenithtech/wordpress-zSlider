@@ -298,13 +298,46 @@
                         "default_value": "#000000"
                     },
                     {
+                        "key": "field_5962880a15b18",
+                        "label": "Background Type",
+                        "name": "background_type",
+                        "type": "radio",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "image_library": "Image (Library)",
+                            "video_library": "Video (Library)",
+                            "video_youtube": "Video (Youtube)"
+                        },
+                        "allow_null": 0,
+                        "other_choice": 0,
+                        "save_other_choice": 0,
+                        "default_value": "",
+                        "layout": "vertical",
+                        "return_format": "value"
+                    },
+                    {
                         "key": "field_58111be3db329",
                         "label": "Background Image",
                         "name": "background_image",
                         "type": "file",
                         "instructions": "Allowed formats: jpg, jpeg, gif and png.",
                         "required": 0,
-                        "conditional_logic": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_5962880a15b18",
+                                    "operator": "==",
+                                    "value": "image_library"
+                                }
+                            ]
+                        ],
                         "wrapper": {
                             "width": "",
                             "class": "",
@@ -323,13 +356,20 @@
                         "type": "radio",
                         "instructions": "",
                         "required": 0,
-                        "conditional_logic": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_5962880a15b18",
+                                    "operator": "==",
+                                    "value": "image_library"
+                                }
+                            ]
+                        ],
                         "wrapper": {
                             "width": "",
                             "class": "",
                             "id": ""
                         },
-                        "layout": "vertical",
                         "choices": {
                             "100% 100%": "Stretch",
                             "cover": "Cover",
@@ -337,20 +377,29 @@
                             "inherit": "Inherit",
                             "initial": "Initial"
                         },
-                        "default_value": "cover",
+                        "allow_null": 0,
                         "other_choice": 0,
                         "save_other_choice": 0,
-                        "allow_null": 0,
+                        "default_value": "cover",
+                        "layout": "vertical",
                         "return_format": "value"
                     },
                     {
                         "key": "field_581485757bc37",
-                        "label": "Background Video (file)",
+                        "label": "Background Video (Library)",
                         "name": "background_video",
                         "type": "repeater",
                         "instructions": "Please insert more than one format. Webm and MP4 are recommended for browser compatibility. Additional formats such as OGG and OGV may also be inserted.",
                         "required": 0,
-                        "conditional_logic": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_5962880a15b18",
+                                    "operator": "==",
+                                    "value": "video_library"
+                                }
+                            ]
+                        ],
                         "wrapper": {
                             "width": "",
                             "class": "",
@@ -385,12 +434,20 @@
                     },
                     {
                         "key": "field_58aea1ee960ff",
-                        "label": "Background Video Poster (file)",
+                        "label": "Background Video Poster (Library)",
                         "name": "background_video_poster",
                         "type": "image",
                         "instructions": "",
                         "required": 0,
-                        "conditional_logic": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_5962880a15b18",
+                                    "operator": "==",
+                                    "value": "video_library"
+                                }
+                            ]
+                        ],
                         "wrapper": {
                             "width": "",
                             "class": "",
@@ -409,12 +466,20 @@
                     },
                     {
                         "key": "field_5818953667c5e",
-                        "label": "Background Video (youtube)",
+                        "label": "Background Video (Youtube)",
                         "name": "background_video_embed",
                         "type": "oembed",
                         "instructions": "Enter youtube URL, eg. https:\/\/www.youtube.com\/watch?v=Dfa1vyMM2DE",
                         "required": 0,
-                        "conditional_logic": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_5962880a15b18",
+                                    "operator": "==",
+                                    "value": "video_youtube"
+                                }
+                            ]
+                        ],
                         "wrapper": {
                             "width": "",
                             "class": "",
@@ -424,11 +489,47 @@
                         "height": ""
                     },
                     {
+                        "key": "field_581a837f5774e",
+                        "label": "Background Video Volume",
+                        "name": "background_video_volume",
+                        "type": "number",
+                        "instructions": "Enter volume value from 0 - 100. Default is 0.",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_5962880a15b18",
+                                    "operator": "==",
+                                    "value": "video_library"
+                                }
+                            ],
+                            [
+                                {
+                                    "field": "field_5962880a15b18",
+                                    "operator": "==",
+                                    "value": "video_youtube"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": 0,
+                        "placeholder": "Enter volume value from 0 - 100. Default is 0.",
+                        "prepend": "",
+                        "append": "",
+                        "min": 0,
+                        "max": 100,
+                        "step": 1
+                    },
+                    {
                         "key": "field_5813b828a345d",
-                        "label": "Background Opacity",
+                        "label": "Background Opacity (Image\/Video)",
                         "name": "background_opacity",
                         "type": "number",
-                        "instructions": "",
+                        "instructions": "Set the opacity CSS value of the background, whether you select a video or image background.",
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
@@ -437,33 +538,12 @@
                             "id": ""
                         },
                         "default_value": 1,
-                        "min": 0,
-                        "max": 1,
-                        "step": "0.1",
                         "placeholder": "default = 1",
                         "prepend": "",
-                        "append": ""
-                    },
-                    {
-                        "key": "field_581a837f5774e",
-                        "label": "Background Video Volume",
-                        "name": "background_video_volume",
-                        "type": "number",
-                        "instructions": "Enter volume value from 0 - 100. Default is 0.",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": 0,
+                        "append": "",
                         "min": 0,
-                        "max": 100,
-                        "step": 1,
-                        "placeholder": "Enter volume value from 0 - 100. Default is 0.",
-                        "prepend": "",
-                        "append": ""
+                        "max": 1,
+                        "step": "0.1"
                     }
                 ]
             }
