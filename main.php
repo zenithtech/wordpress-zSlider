@@ -1,3 +1,4 @@
+<script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
 
 <link rel='stylesheet' href='<?php echo site_url(); ?>/wp-admin/load-styles.php?load%5B%5D=dashicons' type='text/css' media='all' />
 
@@ -8,10 +9,8 @@
     ?>
 </style>
 
-<script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
-
 <script type="text/javascript">
-
+if(document.getElementById('<?php echo get_field('slider_id', 'option'); ?>')){
     <?php
     echo file_get_contents(dirname(__FILE__).'/js/vendor/gs/TweenMax.min.js').
         file_get_contents(dirname(__FILE__).'/js/vendor/gs/TimelineMax.min.js').
@@ -26,7 +25,7 @@
     window.zSlider.__proto__.id = '<?php echo get_field('slider_id', 'option'); ?>';
     window.zSlider.var.siteurl = '<?php echo get_option('siteurl'); ?>';
     window.zSlider.var.template_directory_uri = '<?php echo get_template_directory_uri(); ?>';
-    window.zSlider.var.slider_autoplay = '<?php echo get_field('slider_autoplay', 'option'); ?>';
+    window.zSlider.var.slider_autoplay = <?php echo get_field('slider_autoplay', 'option'); ?>;
     window.zSlider.var.slides = [<?php 
         $slides = get_field('slide', 'option');
         $i = 0;
@@ -137,5 +136,5 @@
     }
 
     <?php echo $background_video_embed_script; ?>
-
+}
 </script>

@@ -5,6 +5,8 @@ Bootstrap is not included since it doesn't affect functionality of the slider, b
 
 This is not a WP plugin. It's a slider script intended for advnaced usage and customization within WP templates.
 
+----
+
 ## Features
 - Abilty to upload images and videos from library, and videos from YouTube.
 - Abilty to enable/disable the slideshow autoplay.
@@ -25,6 +27,7 @@ This is not a WP plugin. It's a slider script intended for advnaced usage and cu
 - Instal the required [ACF](https://github.com/elliotcondon/acf) plugin.
 - Import the json file `acf-zSlider.json` using the ACF.
 - Add the ACF Options WP admin menu item by adding the below code to your themes `functions.php` file:
+
 ```
 if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page(array(
@@ -37,12 +40,27 @@ if( function_exists('acf_add_options_page') ) {
 	));
 }
 ```
+
 - Goto the new WP admin`zSlider` tab, edit the slider to your liking, and set the ID of the tag you wish to render it to, in this case `slider`.
 - Edit your custom WP page template as such:
+
 ```
 <div id="slider"></div>
 <?php include_once('zSlider/main.php'); ?>
 ```
+
+If you're using the [slider within content](https://zenitht.com/wp-slider/slider-within-content/), remember to set a hight, such as:
+
+```
+<style type="text/css">
+	.z-slider {
+		height: 500px;
+	}
+</style>
+```
+
+----
+
 ## Examples:
 Usage as full-screen slider: https://zenitht.com/wp-slider/
 
@@ -50,6 +68,7 @@ Usage as slider within content: https://zenitht.com/wp-slider/slider-within-cont
 
 (u: wp / p: wp)
 
+----
 
 ## Screenshots:
 https://zenitht.com/screenshots/zSlider/screenshot_0.png
@@ -61,6 +80,8 @@ https://zenitht.com/screenshots/zSlider/screenshot_2.png
 ![screenshot_0](https://zenitht.com/screenshots/zSlider/screenshot_0.png)
 ![screenshot_1](https://zenitht.com/screenshots/zSlider/screenshot_1.png)
 ![screenshot_2](https://zenitht.com/screenshots/zSlider/screenshot_2.png)
+
+----
 
 ## License ##
 
