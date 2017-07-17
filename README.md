@@ -49,7 +49,7 @@ if( function_exists('acf_add_options_page') ) {
 <?php include_once('zSlider/main.php'); ?>
 ```
 
-7. If you're using the [slider within content](https://zenitht.com/wp-slider/slider-within-content/), remember to set a hight, such as:
+7. If you're using the [slider within content](https://zenitht.com/wp-slider/slider-within-content/), remember to set a height, such as:
 
 ```
 <style type="text/css">
