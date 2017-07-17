@@ -23,10 +23,10 @@ This is not a WP plugin. It's a slider script intended for advnaced usage and cu
 - Mobile-ready responsive layout (requires Bootstrap, not included in this package).
 
 ## Usage
-- Copy this repo into your active theme directory, naming it `zSlider`.
-- Instal the required [ACF](https://github.com/elliotcondon/acf) plugin.
-- Import the json file `acf-zSlider.json` using the ACF.
-- Add the ACF Options WP admin menu item by adding the below code to your themes `functions.php` file:
+1. Copy this repo into your active theme directory, naming it `zSlider`.
+2. Instal the required [ACF](https://github.com/elliotcondon/acf) plugin.
+3. Import the json file `acf-zSlider.json` using the ACF.
+4. Add the ACF Options WP admin menu item by adding the below code to your themes `functions.php` file:
 
 ```
 if( function_exists('acf_add_options_page') ) {
@@ -41,15 +41,15 @@ if( function_exists('acf_add_options_page') ) {
 }
 ```
 
-- Goto the new WP admin`zSlider` tab, edit the slider to your liking, and set the ID of the tag you wish to render it to, in this case `slider`.
-- Edit your custom WP page template as such:
+5. Goto the new WP admin`zSlider` tab, edit the slider to your liking, and set the ID of the tag you wish to render it to, in this case `slider`.
+6. Edit your custom WP page template as such:
 
 ```
-<div id="slider"></div>
+<div id="slider" class="z-slider"></div>
 <?php include_once('zSlider/main.php'); ?>
 ```
 
-If you're using the [slider within content](https://zenitht.com/wp-slider/slider-within-content/), remember to set a hight, such as:
+7. If you're using the [slider within content](https://zenitht.com/wp-slider/slider-within-content/), remember to set a hight, such as:
 
 ```
 <style type="text/css">
