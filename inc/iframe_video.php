@@ -12,7 +12,7 @@ $tintopacity    = isset($_GET['tintopacity']) && $_GET['tintopacity']!='' ? $_GE
     <head>
         <meta name="viewport" content="width=device-width">
         <script type="text/javascript">
-            <?php echo file_get_contents(dirname(dirname(dirname(dirname(dirname(dirname(__FILE__)))))).'/wp-includes/js/jquery/jquery.js'); ?>
+            <?php echo file_get_contents(dirname(dirname(dirname(dirname(dirname(__FILE__))))).'/wp-includes/js/jquery/jquery.js'); ?>
             jQuery(window).on({
                 load:function(){
                     jQuery("video").get(0).volume = <?php echo $volume; ?>;

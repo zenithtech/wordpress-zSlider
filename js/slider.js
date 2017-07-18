@@ -199,7 +199,7 @@ jQuery(document).on({
                         }
                         if( slide.background_video && !slide.background_video_embed ){
                             backgroundVideoID = this.zSlider.makeid();
-                            backgroundVideo = '<div class="bg video ' + backgroundVideoID + '" style="opacity:' + slide.background_opacity + ';"><iframe class="video_iframe" id="videoFrame_' + backgroundVideoID + '" name="videoFrame_' + backgroundVideoID + '" src="' + this.zSlider.var.template_directory_uri + '/zSlider/inc/iframe_video.php?videoURL=' + slide.background_video[0].video.url + '&mime_type=' + slide.background_video[0].video.mime_type + '&volume=' + slide.background_video_volume / 100 +'&poster=' + slide.background_video_poster.url + '&site_url=' + this.zSlider.var.siteurl + '"></iframe></div>';
+                            backgroundVideo = '<div class="bg video ' + backgroundVideoID + '" style="opacity:' + slide.background_opacity + ';"><iframe class="video_iframe" id="videoFrame_' + backgroundVideoID + '" name="videoFrame_' + backgroundVideoID + '" src="' + this.zSlider.var.siteurl + '/wp-content/plugins/zSlider/inc/iframe_video.php?videoURL=' + slide.background_video[0].video.url + '&mime_type=' + slide.background_video[0].video.mime_type + '&volume=' + slide.background_video_volume / 100 +'&poster=' + slide.background_video_poster.url + '&site_url=' + this.zSlider.var.siteurl + '"></iframe></div>';
                         }
                         if( slide.background_video_embed ){
                             backgroundVideo = '<div class="bg video" style="opacity:' + slide.background_opacity + ';">';
@@ -358,7 +358,8 @@ jQuery(window).on({
         }
     },
     load: function(){
-        if(window.zSlider.var.onYouTubeIframeAPI_checkOnLoad && typeof window.zSlider.var.onYouTubeIframeAPIReadyFired === 'boolean') {
+        if( window.zSlider.var.onYouTubeIframeAPI_checkOnLoad &&
+            typeof window.zSlider.var.onYouTubeIframeAPIReadyFired === 'boolean') {
             if(window.zSlider.var.onYouTubeIframeAPIReadyFired != true){
                 window.zSlider.var.onYouTubeIframeAPIReadyFired = true;
                 window.onYouTubeIframeAPIReady();

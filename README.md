@@ -23,8 +23,8 @@ This is not a WP plugin. It's a slider script intended for advnaced usage and cu
 - Mobile-ready responsive layout (requires Bootstrap, not included in this package).
 
 ## Usage
-1. Copy this repo into your active theme directory, naming it `zSlider`.
-2. Instal the required [ACF](https://github.com/elliotcondon/acf) plugin.
+1. Copy this repo into your `plugins` directory, naming it `zSlider`.
+2. Install the required [ACF](https://github.com/elliotcondon/acf) plugin.
 3. Import the json file `acf-zSlider.json` using the ACF.
 4. Add the ACF Options WP admin menu item by adding the below code to your themes `functions.php` file:
 
@@ -41,15 +41,23 @@ if( function_exists('acf_add_options_page') ) {
 }
 ```
 
-5. Goto the new WP admin`zSlider` tab, edit the slider to your liking, and set the ID of the tag you wish to render it to, in this case `slider`.
+5. Goto the new WP admin`zSlider` tab, edit the slider to your liking, and set the `ID` of the tag you wish to render it to, in this case `slider`.
 6. Edit your custom WP page template as such:
 
 ```
 <div id="slider" class="z-slider"></div>
-<?php include_once('zSlider/main.php'); ?>
+
+<?php include_once(dirname(dirname(dirname(__FILE__))).'/plugins/zSlider/main.php'); ?>
 ```
 
 7. If you're using the [slider within content](https://zenitht.com/wp-slider/slider-within-content/), remember to set a height, such as:
+
+If you have a second WP installation, or other WP installations on the same server, there's no need to copy the `zSlider` folder again. Simply include the slider `main.php` file in the same way from the other WP installation, such as:
+
+```
+<?php include(dirname(dirname(dirname(dirname(dirname(__FILE__))))).'/mySite.com/wp-content/plugins/zSlider/main.php'); ?>
+```
+
 
 ```
 <style type="text/css">
