@@ -58,6 +58,7 @@ if( function_exists('acf_add_options_page') ) {
 	}
 </style>
 ```
+Otherwise the slider will automatically adjust to fit the height and width of any container you place it into.
 
 If you have a second WP installation, or other WP installations on the same server, there's no need to copy the `zSlider` folder again. Simply include the slider `main.php` file in the same way from the other WP installation, such as:
 
