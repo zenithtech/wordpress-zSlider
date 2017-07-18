@@ -70,7 +70,7 @@
 
 .z-slider > .slides.owl-carousel .owl-stage-outer .owl-stage .owl-item {
     height: 100%;
-    display: table;
+    display: block;
     table-layout: auto;
     border-spacing: 0;
     overflow: hidden;
