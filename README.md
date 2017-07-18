@@ -51,20 +51,18 @@ if( function_exists('acf_add_options_page') ) {
 ```
 
 7. If you're using the [slider within content](https://zenitht.com/wp-slider/slider-within-content/), remember to set a height, such as:
-
-If you have a second WP installation, or other WP installations on the same server, there's no need to copy the `zSlider` folder again. Simply include the slider `main.php` file in the same way from the other WP installation, such as:
-
-```
-<?php include(dirname(dirname(dirname(dirname(dirname(__FILE__))))).'/mySite.com/wp-content/plugins/zSlider/main.php'); ?>
-```
-
-
 ```
 <style type="text/css">
 	.z-slider {
 		height: 500px;
 	}
 </style>
+```
+
+If you have a second WP installation, or other WP installations on the same server, there's no need to copy the `zSlider` folder again. Simply include the slider `main.php` file in the same way from the other WP installation, such as:
+
+```
+<?php include(dirname(dirname(dirname(dirname(dirname(__FILE__))))).'/mySite.com/wp-content/plugins/zSlider/main.php'); ?>
 ```
 
 ----
