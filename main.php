@@ -5,6 +5,7 @@
 <style type="text/css">
     <?php
     echo file_get_contents(dirname(__FILE__).'/js/vendor/owl_carousel/assets/owl.carousel.css').
+        file_get_contents(dirname(__FILE__).'/css/bootstrap.min.css').
         file_get_contents(dirname(__FILE__).'/css/style.css');
     ?>
 </style>
