@@ -385,6 +385,39 @@
                         "return_format": "value"
                     },
                     {
+                        "key": "field_5acb9f187f62b",
+                        "label": "Background Image Position",
+                        "name": "background_image_position",
+                        "type": "radio",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_5962880a15b18",
+                                    "operator": "==",
+                                    "value": "image_library"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "0%": "Left",
+                            "50%": "Center",
+                            "100%": "Right"
+                        },
+                        "allow_null": 0,
+                        "other_choice": 0,
+                        "save_other_choice": 0,
+                        "default_value": "50%",
+                        "layout": "vertical",
+                        "return_format": "value"
+                    },
+                    {
                         "key": "field_581485757bc37",
                         "label": "Background Video (Library)",
                         "name": "background_video",

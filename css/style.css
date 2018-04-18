@@ -122,7 +122,8 @@
 
 .z-slider > .slides.owl-carousel .owl-stage-outer .owl-stage .owl-item .slide .bg.image {
     background-repeat: no-repeat;
-    background-position: 50%;
+    background-position-y: 50%;
+    background-position-x: 50%;
 }
 
 .z-slider > .slides.owl-carousel .owl-stage-outer .owl-stage .owl-item .slide .bg.video,

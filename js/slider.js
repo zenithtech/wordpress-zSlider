@@ -67,7 +67,7 @@ window.zSlider = Object.create({
         if(jQuery(id + ' .owl-item div.bg.video .video_iframe').length != 0) {
             jQuery('.video_iframe').each(function(){
                 var name = jQuery(this).attr('name');
-            	jQuery(frames[name].document.body).find("video").get(0).pause();
+                jQuery(frames[name].document.body).find("video").get(0).pause();
             });
         }
     },
@@ -145,7 +145,7 @@ window.zSlider = Object.create({
         if(jQuery(id + ' .owl-item.active div.bg.video .video_iframe').length != 0) {
             var name = jQuery(id + ' .owl-item.active div.bg.video .video_iframe').attr('name');
             try {
-            	jQuery(frames[name].document.body).find("video").get(0).play();
+                jQuery(frames[name].document.body).find("video").get(0).play();
             } catch (e) {
             }
         }
@@ -192,10 +192,11 @@ jQuery(document).on({
                         var backgroundImage = '',
                             backgroundVideo = '',
                             backgroundVideoID = '',
-                            backgroundVideoScript = ''
+                            backgroundVideoScript = '',
+                            cta = '';
 
                         if( slide.background_image.type == 'image' ){
-                            backgroundImage = '<div class="bg image" style="background-size:' + slide.background_image_size + ';background-image:url(' + slide.background_image.url + '); opacity:' + slide.background_opacity + ';"></div>'
+                            backgroundImage = '<div class="bg image" style="background-size:' + slide.background_image_size + '; background-image:url(' + slide.background_image.url + '); opacity:' + slide.background_opacity + '; background-position-x: ' + slide.background_image_position + ';"></div>'
                         }
                         if( slide.background_video && !slide.background_video_embed ){
                             backgroundVideoID = this.zSlider.makeid();
@@ -206,18 +207,21 @@ jQuery(document).on({
                             backgroundVideo += slide.background_video_embed;
                             backgroundVideo += '</div>';
                         }
-                        return '\
-                            <div class="slide" style="background-color: ' + slide.background_color + ';" data-index="' + index + '" data-timeout="' + slide.autoplayTimeout + '">' + 
-                                '<div class="content">' + backgroundImage + backgroundVideo + 
-                                    '<div class="container">' + 
-                                        '<h1 class="title" style="color: ' + slide.headline_color + ';">' + slide.title + '</h1>' + 
-                                        '<p class="subheadline" style="color: ' + slide.text_color + ';">' + slide.subheadline + '</p>' + 
-                                        '<a class="page ' + slide.cta_style + '" href="' + slide.page + '" target="_self">' + slide.cta_text + '<i class="fa fa-arrow-right" aria-hidden="true"></i></a>' + 
-                                    '</div>\
-                                </div>\
-                            </div>\
-                        </div>\
-                        ';
+                        if( slide.cta_text != '' ){
+                            cta = '<a class="page ' + slide.cta_style + '" href="' + slide.page + '" target="_self">' + slide.cta_text + '<i class="fa fa-arrow-right" aria-hidden="true"></i></a>';
+                        }
+                        return `
+                            <div class="slide" style="background-color: ${slide.background_color};" data-index="${index}" data-timeout="${slide.autoplayTimeout}">
+                                <div class="content">${backgroundImage} ${backgroundVideo}
+                                    <div class="container">
+                                        <h1 class="title" style="color: ${slide.headline_color};">${slide.title}</h1>
+                                        <p class="subheadline" style="color: ${slide.text_color};">${slide.subheadline}</p>
+                                        ${cta}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        `;
                     }
                 });
 
@@ -230,25 +234,30 @@ jQuery(document).on({
                     if( slide.subheadline_pagination == '' ){
                         slide.subheadline_pagination = '&nbsp;';
                     }
-                    return '\
-                    <div class="owl-dot">' + 
-                        '<div class="bar2"></div><div class="bar"></div>\
-                        <h1 class="title_pagination">' + slide.title_pagination + '</h1>' + 
-                        '<p class="subheadline_pagination">' + slide.subheadline_pagination + '</p>' + 
-                    '</div>\
-                    ';
+                    return `
+                        <div class="owl-dot">
+                            <div class="bar2"></div><div class="bar"></div>
+                            <h1 class="title_pagination">${slide.title_pagination}</h1>
+                            <p class="subheadline_pagination">${slide.subheadline_pagination}</p>
+                        </div>
+                        `;
                 });
 
-
             document.getElementById(window.zSlider.id).innerHTML = '\
-                <div class="slides owl-carousel"></div>\
-                <div class="pagination">\
-                    <div class="pagination_table container"></div>\
-                </div>';
+                <div class="slides owl-carousel"></div>';
+
             document.getElementById(window.zSlider.id).getElementsByClassName('slides')[0].innerHTML = window.zSlider.__proto__.returnSlides.join('');
-            document.getElementById(window.zSlider.id).getElementsByClassName('pagination_table')[0].innerHTML = window.zSlider.__proto__.returnPagination.join('');
+
+            if( window.zSlider.var.slides.length > 1 ) {
+                document.getElementById(window.zSlider.id).innerHTML += '\
+                    <div class="pagination">\
+                        <div class="pagination_table container"></div>\
+                    </div>';
+                document.getElementById(window.zSlider.id).getElementsByClassName('pagination_table')[0].innerHTML = window.zSlider.__proto__.returnPagination.join('');
+            }
 
             window.zSlider.owl = jQuery('#' + window.zSlider.id + ' .slides');
+
             window.zSlider.owl.owlCarousel({
                 nav: true,
                 navText: ['<span class="dashicons dashicons-arrow-left-alt2"></span>', '<span class="dashicons dashicons-arrow-right-alt2"></span>'],
@@ -273,17 +282,17 @@ jQuery(document).on({
                 },
                 onInitialized: function(){
                     var t = this,
-                		currSlide = t._current + 1,
-                		length = t._items.length,
+                        currSlide = t._current + 1,
+                        length = t._items.length,
                         id = '#' + window.zSlider.id;
 
                     if (t.settings.autoplay) {
                         window.zSlider.owl.trigger('refresh.owl.carousel');
-            			window.zSlider.owl.trigger('stop.owl.autoplay');
+                        window.zSlider.owl.trigger('stop.owl.autoplay');
                         t.settings.autoplayTimeout = jQuery(id + ' .owl-item.active .slide').attr('data-timeout');
-            			window.zSlider.owl.trigger('play.owl.autoplay');
+                        window.zSlider.owl.trigger('play.owl.autoplay');
                         var timeout = jQuery(id + ' .owl-item.active .slide').attr('data-timeout')/1000;
-            			TweenMax.fromTo(id + ' .pagination .owl-dot.active .bar', timeout, {css:{width:'0%'}}, {css:{width:'100%'}, ease: Power0.easeNone});
+                        TweenMax.fromTo(id + ' .pagination .owl-dot.active .bar', timeout, {css:{width:'0%'}}, {css:{width:'100%'}, ease: Power0.easeNone});
                     }
                     jQuery('<div class="slide-num">' + currSlide + '/' + length + '</div>').insertAfter(id + ' > .slides.owl-carousel .owl-nav > .owl-prev');
                     window.zSlider.redrawRect();
@@ -293,20 +302,20 @@ jQuery(document).on({
                         id = '#' + window.zSlider.id;
 
                     if (t.settings.autoplay) {
-            			TweenLite.to(id + ' .pagination .owl-dot.active .bar', 0.5, {width:'100%', ease: Power2.easeOut});
+                        TweenLite.to(id + ' .pagination .owl-dot.active .bar', 0.5, {width:'100%', ease: Power2.easeOut});
                     }
                 },
                 // onChanged: function(){},
                 onTranslate: function(){
                     var t = this,
-                		currSlide = t._current + 1,
-                		length = t._items.length,
+                        currSlide = t._current + 1,
+                        length = t._items.length,
                         id = '#' + window.zSlider.id;
 
-    				jQuery(id + ' > .slides.owl-carousel .owl-nav > div.slide-num').html(currSlide + '/' + length);
+                    jQuery(id + ' > .slides.owl-carousel .owl-nav > div.slide-num').html(currSlide + '/' + length);
 
                     if (t.settings.autoplay) {
-            			TweenLite.to(id + ' .pagination .owl-dot.active .bar', 0.5, {width:'0%', ease: Power2.easeOut});
+                        TweenLite.to(id + ' .pagination .owl-dot.active .bar', 0.5, {width:'0%', ease: Power2.easeOut});
                     }
                     if(window.zSlider.var.onTranslateBoolVar == 0) {
                         window.zSlider.var.onTranslateBoolVar = 1;
@@ -319,23 +328,23 @@ jQuery(document).on({
                     }
                 },
                 onTranslated: function(){
-                	var t = this,
+                    var t = this,
                         id = '#' + window.zSlider.id;
 
                     window.zSlider.pauseAllVideos();
 
                     if (t.settings.autoplay) {
                         window.zSlider.owl.trigger('refresh.owl.carousel');
-            			window.zSlider.owl.trigger('stop.owl.autoplay');
+                        window.zSlider.owl.trigger('stop.owl.autoplay');
                         t.settings.autoplayTimeout = jQuery(id + ' .owl-item.active .slide').attr('data-timeout');
-            			window.zSlider.owl.trigger('play.owl.autoplay');
+                        window.zSlider.owl.trigger('play.owl.autoplay');
                         var timeout = jQuery(id + ' .owl-item.active .slide').attr('data-timeout')/1000;
-            			TweenMax.fromTo(id + ' .pagination .owl-dot.active .bar', timeout, {css:{width:'0%'}}, {css:{width:'100%'}, ease: Power0.easeNone, onComplete: window.zSlider.autoplayComplete });
+                        TweenMax.fromTo(id + ' .pagination .owl-dot.active .bar', timeout, {css:{width:'0%'}}, {css:{width:'100%'}, ease: Power0.easeNone, onComplete: window.zSlider.autoplayComplete });
                     }
                     if(jQuery(id + ' .owl-item.active div.bg.video .video_iframe').length != 0) {
                         var name = jQuery(id + ' .owl-item.active div.bg.video .video_iframe').attr('name');
                         try {
-                        	jQuery(frames[name].document.body).find('video').get(0).play();
+                            jQuery(frames[name].document.body).find('video').get(0).play();
                         } catch (e) {
                         }
                     }
