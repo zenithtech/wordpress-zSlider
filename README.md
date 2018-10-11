@@ -48,7 +48,7 @@ if( function_exists('acf_add_options_page') ) {
 <?php include_once(dirname(dirname(dirname(__FILE__))).'/plugins/zSlider/main.php'); ?>
 ```
 
-7. If you're using the [slider within content](https://zenitht.com/wp-slider/slider-within-content/), remember to set a height, such as:
+7. If you're using the [slider within content](https://zenitht.com/wp-plugins/slider-within-content/), remember to set a height, such as:
 ```
 <style type="text/css">
 	.z-slider {
@@ -67,9 +67,9 @@ If you have a second WP installation, or other WP installations on the same serv
 ----
 
 ## Examples:
-Usage as full-screen slider: https://zenitht.com/wp-slider/
+Usage as full-screen slider: https://zenitht.com/wp-plugins/
 
-Usage as slider within content: https://zenitht.com/wp-slider/slider-within-content/
+Usage as slider within content: https://zenitht.com/wp-plugins/slider-within-content/
 
 (u: wp / p: wp)
 
