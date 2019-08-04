@@ -67,8 +67,10 @@ If you have a second WP installation, or other WP installations on the same serv
 ----
 
 ## Examples:
-https://zenitht.com/wp/wordpress-zslider-plugin-test/
+Fit to page slider:
+https://zenitht.com/wp-plugins/
 
+Within content: https://zenitht.com/wp-plugins/slider-within-content/
 (u: wp / p: wp)
 
 ----
